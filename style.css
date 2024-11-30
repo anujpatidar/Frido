@@ -76,7 +76,7 @@
 }
  .scroll-card {
      flex: 0 0 350px;
-     height: 65vh;
+     height: 80vh;
      width: 40vw;
      border-radius: 12px;
      display: flex;
