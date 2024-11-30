@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    
+    <section class="vertical-section">
+        <div class="heading">
+            <h3>Save extra 5% on prepaid orders</h3>
+            <a href="">Learn More</a>
+        </div>
+        <div class="navbar">
+            Frido
+        </div>
+    </section>
+
+    
+    <section class="horizontal-scroll-section">
+        <div class="content">
+            <h2>Bestsellers</h2>
+            <a href="">View All</a>
+        </div>
+        <div class="sticky-container">
+            <div class="cards-container">
+                <div class="scroll-card first">
+                    <div class="image">
+                        <img src="frido1.JPG" alt="">
+                    </div>
+                    <div class="proname">
+                        <h3>Frido Arch Support Rigid Insoles</h3>
+                        <p>Helps with arch correction, over-pronation and knock knees.</p>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn1">Small 3-5 UK</button>
+                        <button type="button" class="btn2">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="scroll-card">
+                    <div class="image">
+                        <img src="frido1.JPG" alt="">
+                    </div>
+                    <div class="proname">
+                        <h3>Frido Arch Support Rigid Insoles</h3>
+                        <p>Helps with arch correction, over-pronation and knock knees.</p>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn1">Small 3-5 UK</button>
+                        <button type="button" class="btn2">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="scroll-card">
+                    <div class="image">
+                        <img src="frido1.JPG" alt="">
+                    </div>
+                    <div class="proname">
+                        <h3>Frido Arch Support Rigid Insoles</h3>
+                        <p>Helps with arch correction, over-pronation and knock knees.</p>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn1">Small 3-5 UK</button>
+                        <button type="button" class="btn2">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="scroll-card">
+                    <div class="image">
+                        <img src="frido1.JPG" alt="">
+                    </div>
+                    <div class="proname">
+                        <h3>Frido Arch Support Rigid Insoles</h3>
+                        <p>Helps with arch correction, over-pronation and knock knees.</p>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn1">Small 3-5 UK</button>
+                        <button type="button" class="btn2">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="scroll-card">
+                    <div class="image">
+                        <img src="frido1.JPG" alt="">
+                    </div>
+                    <div class="proname">
+                        <h3>Frido Arch Support Rigid Insoles</h3>
+                        <p>Helps with arch correction, over-pronation and knock knees.</p>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn1">Small 3-5 UK</button>
+                        <button type="button" class="btn2">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="scroll-card">
+                    <div class="image">
+                        <img src="frido1.JPG" alt="">
+                    </div>
+                    <div class="proname">
+                        <h3>Frido Arch Support Rigid Insoles</h3>
+                        <p>Helps with arch correction, over-pronation and knock knees.</p>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn1">Small 3-5 UK</button>
+                        <button type="button" class="btn2">ADD TO CART</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="vertical-section">
+        <div class="category">
+            <h3>Shop by Categories</h3>
+            <a href="">View All</a>
+        </div>
+    </section>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress-indicator"></div>
+    </div>
+
+    <script>
+        const horizontalSection = document.querySelector('.horizontal-scroll-section');
+        const container = document.querySelector('.cards-container');
+        const cards = document.querySelectorAll('.scroll-card');
+        const progressIndicator = document.querySelector('.progress-indicator');
+        const sectionIndicator = document.querySelector('.section-indicator');
+
+        
+        const cardWidth = 280; // match with CSS
+        const cardGap = 16; // match with CSS
+        const totalScroll = (cards.length * cardWidth) + ((cards.length - 1) * cardGap) - window.innerWidth + 32; // 32 for padding
+
+        window.addEventListener('scroll', () => {
+           
+            const rect = horizontalSection.getBoundingClientRect();
+            const scrollPercentage = Math.max(0, Math.min(1, -rect.top / (rect.height - window.innerHeight)));
+            const translateX = -scrollPercentage * totalScroll;
+
+            if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
+                container.style.transform = `translateX(${translateX}px)`;
+            }
+                
+
+        });
+    </script>
+</body>
+
+</html>
